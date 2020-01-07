@@ -1,5 +1,8 @@
 package com.velankani.inheritance;
-
+/**
+ * @author ${Ashish Mamgain}
+ * 07-Jan-2020
+ */
 class Teacher {
    String designation = "Teacher";
    String collegeName = "Beginnersbook";
