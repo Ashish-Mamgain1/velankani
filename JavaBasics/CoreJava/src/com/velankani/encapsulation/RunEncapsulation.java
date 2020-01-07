@@ -6,6 +6,8 @@ package com.velankani.encapsulation;
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020
  */
+//Java program to illustrate the
+//concept of Encapsulation
 class EncapTest {
 	private String name;
 	private String idNum;

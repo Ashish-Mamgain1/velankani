@@ -6,6 +6,8 @@ package com.velankani.polymorphism;
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020
  */
+//Java program to illustrate the
+//concept of polymorphism
 class Overload {
 	void demo(int a) {
 		System.out.println("a: " + a);

@@ -3,6 +3,8 @@ package com.velankani.inheritance;
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020
  */
+//Java program to illustrate the
+//concept of Inheritance
 class Teacher1 {
 	private String designation = "Teacher";
 	private String collegeName = "Beginnersbook";

@@ -6,6 +6,8 @@ package com.velankani.polymorphism;
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020
  */
+//Java program to illustrate the
+//concept of polymorphism
 class Animal {
 	public void sound() {
 		System.out.println("Animal is making a sound");
