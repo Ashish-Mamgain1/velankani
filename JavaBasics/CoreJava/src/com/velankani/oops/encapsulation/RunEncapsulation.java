@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.velankani.encapsulation;
+package com.velankani.oops.encapsulation;
 
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020

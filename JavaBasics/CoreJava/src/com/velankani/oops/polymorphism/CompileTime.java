@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.velankani.polymorphism;
+package com.velankani.oops.polymorphism;
 
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020

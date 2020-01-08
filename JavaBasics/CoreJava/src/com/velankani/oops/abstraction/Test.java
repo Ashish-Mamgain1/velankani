@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.velankani.abstraction;
+package com.velankani.oops.abstraction;
 
 /**
  * @author ${Ashish Mamgain} 07-Jan-2020

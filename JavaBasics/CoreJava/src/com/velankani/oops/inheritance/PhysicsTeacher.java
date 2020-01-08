@@ -1,4 +1,4 @@
-package com.velankani.inheritance;
+package com.velankani.oops.inheritance;
 /**
  * @author ${Ashish Mamgain}
  * 07-Jan-2020
