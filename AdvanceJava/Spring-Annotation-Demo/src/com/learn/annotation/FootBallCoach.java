@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TennisCoach implements Coach {
+public class FootBallCoach implements Coach {
 
 	private FortuneService fortuneService;
 
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
+	public FootBallCoach(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
 	@Override
 	public String getDailyWorkOut() {
 		// TODO Auto-generated method stub
-		return "Practise your Backhand Service";
+		return "Play foot ball for 2 hrs.";
 	}
 
 	@Override
