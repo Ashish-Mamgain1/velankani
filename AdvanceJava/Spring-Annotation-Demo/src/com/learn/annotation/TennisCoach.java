@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
 	// Field Injection : No need for setter and getter method.Put directly
-	// @Autowired on top of the field. On background it will use java reflection.
+	// @Autowired on top of the field. On background it will use Java reflection.
 	@Autowired
 	private FortuneService fortuneService;
 
