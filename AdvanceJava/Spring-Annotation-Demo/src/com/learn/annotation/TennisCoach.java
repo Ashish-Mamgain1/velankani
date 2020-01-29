@@ -8,9 +8,33 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 
+	public TennisCoach() {
+		System.out.println(">>TennisCoach : Inside default constructor");
+		// TODO Auto-generated constructor stub
+	}
+
+	public FortuneService getFortuneService() {
+		return fortuneService;
+	}
+
+	/*
+	 * //Constructor Injection
+	 * 
+	 * @Autowired public TennisCoach(FortuneService fortuneService) {
+	 * this.fortuneService = fortuneService; }
+	 */
+
+	// Setter Injection
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println(">>TennisCoach : Inside setFortuneService");
+		fortuneService = theFortuneService;
+	}
+
+	// Method Injection
+	@Autowired
+	public void doSomeCrazyStuff(FortuneService theFortuneService) {
+		System.out.println("Hello Ashish calling Ashish : " + theFortuneService);
 	}
 
 	@Override
