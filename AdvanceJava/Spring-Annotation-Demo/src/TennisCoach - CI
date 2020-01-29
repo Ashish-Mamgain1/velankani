@@ -1,0 +1,35 @@
+package com.learn.annotation;
+
+// Constructor Injection Demo
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TennisCoach implements Coach {
+
+	private FortuneService fortuneService;
+
+	// define a default constructor
+	public TennisCoach() {
+		System.out.println(">> TennisCoach: Inside default constructor");
+	}
+
+	// Constructor Injection
+	@Autowired
+	public TennisCoach(FortuneService fortuneService) {
+		System.out.println(">> TennisCoach: Constructor Injection Demo");
+		System.out.println(">> TennisCoach: inside default constructor");
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String getDailyWorkOut() {
+		return "Practise your Backhand Service";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return fortuneService.getFortuneService();
+	}
+}

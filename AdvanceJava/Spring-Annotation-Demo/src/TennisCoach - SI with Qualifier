@@ -1,5 +1,6 @@
 package com.learn.annotation;
 
+// Setter Injection Demo
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -13,31 +14,22 @@ public class TennisCoach implements Coach {
 		System.out.println(">>TennisCoach : Inside default constructor");
 
 	}
-
+	
 	// Setter Injection
 	@Autowired
-	@Qualifier("randomFortuneService")
+	@Qualifier("happyFortuneService")
 	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println(">>TennisCoach : Inside setFortuneService");
+		System.out.println(">>TennisCoach : Setter Injection Demo");
 		fortuneService = theFortuneService;
-	}
-
-	// Method Injection
-	@Autowired
-	@Qualifier("randomFortuneService")
-	public void doSomeCrazyStuff(FortuneService theFortuneService) {
-		System.out.println("Method Injection Demo : " + theFortuneService);
 	}
 
 	@Override
 	public String getDailyWorkOut() {
-		// TODO Auto-generated method stub
 		return "Practise your Backhand Service";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
 		return fortuneService.getFortuneService();
 	}
 

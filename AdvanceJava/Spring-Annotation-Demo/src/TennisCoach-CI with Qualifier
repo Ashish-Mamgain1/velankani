@@ -1,0 +1,35 @@
+package com.learn.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TennisCoach implements Coach {
+
+    private FortuneService fortuneService;
+
+    // define a default constructor
+    public TennisCoach() {
+        System.out.println(">> TennisCoach: inside default constructor");
+    }
+    
+    @Autowired
+    public TennisCoach(@Qualifier("randomFortuneService") FortuneService theFortuneService) {
+
+        System.out.println(">> TennisCoach: inside constructor using @autowired and @qualifier");
+        
+        fortuneService = theFortuneService;
+    }
+     
+    @Override
+    public String getDailyWorkOut() {
+        return "Practice your backhand volley";
+    }
+
+    @Override
+    public String getDailyFortune() {
+        return fortuneService.getFortuneService();
+    }
+
+}
