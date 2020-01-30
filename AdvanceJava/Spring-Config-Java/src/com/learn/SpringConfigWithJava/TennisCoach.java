@@ -1,7 +1,9 @@
 package com.learn.SpringConfigWithJava;
 
 import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
 	@Autowired
+	@Qualifier("happyFortuneService")
 	private FortuneService fortuneService;
 
 	@PostConstruct
