@@ -18,14 +18,12 @@
 		<br>
 	
 	Country : <form:select path="country">
-			<form:options items="${theCountryOptions}" />
+			<form:option value="India" label="India" />
+			<form:option value="Russia" label="Russia" />
+			<form:option value="USA" label="USA" />
+			<form:option value="Nepal" label="Nepal" />
+
 		</form:select>
-
-
-		<%-- Uncomment this to use list from constructor <form:select path="country">
-			<form:options items ="${student.countryOptions}" />
-
-		</form:select> --%>
 
 		<input type="submit" value="Submit" />
 
