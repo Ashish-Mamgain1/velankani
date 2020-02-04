@@ -1,18 +1,24 @@
 package com.learn.hibernate.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.learn.hibernate.demo.DateUtils;
 
 @Entity
 @Table(name = "student")
 public class Student {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
@@ -25,16 +31,21 @@ public class Student {
 	@Column(name = "email")
 	private String email;
 
+	@Column(name = "date_of_birth")
+	@Temporal(TemporalType.DATE)
+	private Date dateOfBirth;
+
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String firstName, String lastName, String email) {
+	public Student(String firstName, String lastName, String email, Date theDateOfBirth) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.dateOfBirth = theDateOfBirth;
 	}
 
 	public int getId() {
@@ -69,11 +80,17 @@ public class Student {
 		this.email = email;
 	}
 
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email +  ", dateOfBirth=" + DateUtils.formatDate(dateOfBirth) + "]";
 	}
-	
-	
 
 }

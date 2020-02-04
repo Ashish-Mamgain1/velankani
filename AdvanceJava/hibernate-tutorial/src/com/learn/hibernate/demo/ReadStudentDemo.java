@@ -52,7 +52,7 @@ public class ReadStudentDemo {
 	private static void displayStudents(List<Student> theStudents) {
 		for (Student student : theStudents) {
 			System.out.println(student.getId() + " " + student.getFirstName() + " " + student.getLastName() + " "
-					+ student.getEmail());
+					+ student.getEmail()+" "+ student.getDateOfBirth());
 		}
 		System.out.println("\n");
 	}
