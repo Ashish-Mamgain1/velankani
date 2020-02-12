@@ -36,6 +36,7 @@ public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 		// TODO Auto-generated method stub
 		Session currentSession = entityManager.unwrap(Session.class);
 		Employee theEmployee = currentSession.get(Employee.class, theId);
+		
 		return theEmployee;
 	}
 
