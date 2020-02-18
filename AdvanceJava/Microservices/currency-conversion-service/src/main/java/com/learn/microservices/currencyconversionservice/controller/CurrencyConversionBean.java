@@ -11,9 +11,9 @@ public class CurrencyConversionBean {
 	private BigDecimal quantity;
 	private BigDecimal totalCalculatedAmount;
 	private int port;
-	
+
 	public CurrencyConversionBean() {
-		
+
 	}
 
 	/**
@@ -92,8 +92,5 @@ public class CurrencyConversionBean {
 	public void setPort(int port) {
 		this.port = port;
 	}
-	
-	
-	
-	
+
 }
